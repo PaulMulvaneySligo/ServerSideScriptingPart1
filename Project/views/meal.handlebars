@@ -1,0 +1,21 @@
+<header id="{{meal.name}}" class="masthead d-flex align-items-center">
+    <div class="container px-4 px-lg-5 text-center">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+            <h3 class="card-title m-2">{{meal.name}} at Devilles</h3>
+
+            {{#if meal.time}}
+            <h4 class="text-white">{{meal.name}} served from {{meal.time}}</h4>
+            {{/if}}
+
+            <ul>
+            {{#each meal.items}}
+            <li class="mb-2">{{this}}</li>
+            {{/each}}
+            </ul>
+            
+            <a class="btn btn-outline-warning btn-xl mt-2" href="/booking">Book a table</a>
+            </div>
+        </div>
+    </div>
+</header>
